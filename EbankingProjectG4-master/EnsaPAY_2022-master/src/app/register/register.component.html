@@ -1,0 +1,39 @@
+<div class="login-page">
+    <mat-card class="mat-elevation-z12">
+        <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+            <mat-tab label="Sign In">
+                <mat-card-content>
+                    <form 
+                    name="form"
+                    (ngSubmit)="f.form.valid && onSubmit()"
+                    #f="ngForm"
+                    novalidate>
+                        <mat-form-field>
+                            <input
+                            matInput placeholder="Email" required name="email"  [(ngModel)]="form.email" #email="ngModel">
+                            <mat-error *ngIf="email.invalid">Email is required</mat-error>
+                            <mat-icon matSuffix>email</mat-icon>
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input
+                            matInput placeholder="Password" required minlength="6" type="password" name="password" [(ngModel)]="form.password" #password="ngModel">
+                            <mat-error *ngIf="password.invalid">Password is required</mat-error>
+                            <mat-icon matSuffix>lock</mat-icon>
+                        </mat-form-field>
+                        <a href="">Forgot password? </a>
+                        <button mat-raised-button color="primary" class="login-button">Sign In</button>
+                        <div class="form-group">
+                            <div
+                              class="alert alert-danger"
+                              role="alert"
+                              *ngIf="f.submitted && isLoginFailed"
+                            >
+                              Login failed: {{ errorMessage }}
+                            </div>
+                          </div>
+                    </form>
+                </mat-card-content>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-card>
+</div>

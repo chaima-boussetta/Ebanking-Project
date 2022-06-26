@@ -1,0 +1,39 @@
+.total{
+    display: flex;
+    background-color: rgba(138, 43, 226,0.4);
+    height:70px ;
+}
+.logo{
+    flex-basis: 50%;
+    width: 100%;
+    margin-top: 8px;
+}
+.logo img{
+    width: 150px;
+    margin-left: 20px;
+}
+.welcome{
+    padding-top: 20px;
+}
+.welcome h1{
+    margin-left: 200px;
+    font-style: italic;
+    font-family: sans-serif;
+    font-weight:20;
+    color: white;
+    font-size: 20px;
+}
+.user{
+    float: right;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: 80px;
+    margin-top: 10px;
+}
+.user img{
+    width: 50px;
+    /*margin-top: 10px;*/
+    /*margin-left: 85px;*/
+}

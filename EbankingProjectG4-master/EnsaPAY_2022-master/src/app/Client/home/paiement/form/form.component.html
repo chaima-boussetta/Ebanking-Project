@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row mb-g3">
+      <div class="col-lg-8">
+        <div class="card dar">
+          <div class="card-body">
+            <form class="form" action="" accept-charset="YTF-8" method="post">
+              <h1>Effectuer Un Paiement</h1>
+              <hr />
+              <br />
+              <div class="form-text">Référence :</div>
+              <input
+                class="form-control"
+                name="name"
+                type="text"
+                id="name"
+                placeholder="Ref de la facture"
+                [(ngModel)]="facture.id"
+              />
+  
+              <br />
+              <div class="form-text">Montant :</div>
+              <input
+                class="form-control"
+                name="amount"
+                type="text"
+                id="amount"
+                placeholder="Montant en DH"
+                readonly
+              /><br />
+              <button class="btn btn-warning" type="submit">Annuler</button>
+              <button class="btn btn-success" type="submit" (click)="valider()" >Valider</button>
+            </form>
+
+            <form class="form" action="" accept-charset="YTF-8" method="post" *ngIf="{showCode}">
+                
+                <div class="form-text">Sasir le code envoyé à votre Tél :</div>
+                <input
+                  class="form-control"
+                  name="name"
+                  type="text"
+                  id="name"
+                />
+                <br />
+                <button class="btn btn-success" type="submit" (click)="payer()" >Valider</button>
+              </form>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>

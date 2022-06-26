@@ -1,0 +1,39 @@
+.am {
+    height: 53.4vh;
+    width: 100vw;
+  }
+  .cd {
+    margin: 30;
+  }
+  .dar {
+    height: 60vh;
+  }
+  
+  .btn {
+    text-align: center;
+    width: 100px;
+    background-color: #328ac9;
+    margin-right: 10px;
+    padding:3px;
+    color: white;
+    border: 1px solid #328ac9;
+    border-radius: 10px;
+    margin-bottom:30px;
+  }
+  
+  .btn-warning {
+    color: white;
+    padding:3px;
+    background-color: #7f22bd;
+    border: 1px solid #7f22bd;
+    border-radius: 10px
+  }
+  
+  .col-lg-4 img {
+    text-align: center;
+    width: 100%;
+  }
+  .col-lg-4 {
+    display: flex;
+    justify-content: center;
+  }

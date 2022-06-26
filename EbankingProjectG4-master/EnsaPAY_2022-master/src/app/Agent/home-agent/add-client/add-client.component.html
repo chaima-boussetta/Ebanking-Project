@@ -1,0 +1,105 @@
+<div>
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="firstname">FirstName</label>
+          <input
+            type="text"
+            class="form-control"
+            id="firstname"
+            required
+           [(ngModel)]="client.firstname"
+            name="firstname"
+          />
+        </div>
+        <div class="form-group">
+          <label for="lastname">LastName</label>
+          <input
+            class="form-control"
+            id="lastname"
+            required
+            [(ngModel)]="client.lastname"
+            name="lastname"
+          />
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input
+              type="text"
+              class="form-control"
+              id="phone"
+              required
+             [(ngModel)]="client.phone"
+              name="phone"
+            />
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="text"
+                class="form-control"
+                id="email"
+                required
+               [(ngModel)]="client.email"
+                name="emal"
+              />
+              <div class="form-group">
+                <label for="email">Email CONFIRMATION</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  required
+                 [(ngModel)]="client.confirmationEmail"
+                  name="emal"
+                />
+                <div class="form-group">
+                  <label for="email">date</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="email"
+                    required
+                   [(ngModel)]="client.dateOfBirth"
+                    name="emal"
+                  />
+
+                  <div class="form-group">
+                    <label for="pieceIdentity">pieceIdentity</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="pieceIdentity"
+                      required
+                     [(ngModel)]="client.pieceIdentity"
+                      name="pieceIdentity"
+                    />
+                    <div class="form-group">
+                      <label for="n_pieceIdentity"> N pieceIdentity</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="n_pieceIdentity"
+                        required
+                       [(ngModel)]="client.n_pieceIdentity"
+                        name="n_pieceIdentity"
+                      />
+                      <div class="form-group">
+                        <label for="address">address</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="address"
+                          required
+                         [(ngModel)]="client.address"
+                          name="address"
+                        />
+
+          
+        </div>
+        <button  class="btn btn-success" (click)="saveClient()">Submit</button>
+      </div>
+      <div *ngIf="submitted">
+        <h4>Client was submitted successfully!</h4>
+        <button class="btn btn-success" (click)="newClient()">Add</button>
+      </div>
+    </div>
+  </div>

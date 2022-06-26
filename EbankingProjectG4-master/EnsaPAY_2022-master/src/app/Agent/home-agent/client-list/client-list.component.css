@@ -1,0 +1,38 @@
+.list {
+  text-align: left;
+  width: 100%;
+  height: auto;
+ 
+ 
+}
+.container{
+
+margin: auto;
+padding: 20px;
+}
+.form-control{
+margin-bottom: 5px;
+width: 200px;
+height: 28px;
+background: transparent;
+outline: none;
+border-top:hidden;
+border-left: hidden;
+border-right: hidden;
+border-bottom: 1.5px solid #48C8F1;
+color: black;
+font-size: 14px;
+padding-left:5px ;
+}
+.col-md-8{
+display: flex;
+}
+.btn{
+transform: translate(220px,-36px);
+background-color: #48C8F1;
+color: white;
+height: 33px;
+width: 70px;
+border: 1px solid white;
+border-radius: 5px;
+}

@@ -1,0 +1,107 @@
+<div class="container">
+    <div class="top">
+        <h1>Informations Personnelles</h1>
+        <hr><br>
+        <form class="formlaire">
+            <div class="row">
+                <div class="left">
+                    <label for="firstname">Nom*</label><br>
+                <input type="text" [(ngModel)]="agent.firstname" [ngModelOptions]="{standalone: true}"/>
+                </div>
+                <h1>{{agent.firstname}}</h1>
+                <div class="right">
+                    <label>Prenom*</label><br>
+                <input type="text" required  [(ngModel)]="agent.lastname" [ngModelOptions]="{standalone: true}"/>
+                </div>
+                
+                
+            </div>
+            <div class="row">
+                <div class="left">
+                    <label for="cars">Piece d'identite*</label><br>
+
+                    <select name="pi" id="pi" >
+                    <option value="cin">C.I.N</option>
+                    <option value="permis">Permis de conduite</option>
+                    <option value="passport">Passport</option>
+                    
+                    </select>
+                </div>
+                <div class="right" >
+                    <label>N piece d'identite*</label><br>
+                    <input type="text" required  [(ngModel)]="agent.pieceIdentity" [ngModelOptions]="{standalone: true}"> 
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="left">
+                    <label>Date de naissance*</label><br>
+                <input type="text" required [(ngModel)]="agent.dateOfBirth" [ngModelOptions]="{standalone: true}" >
+                </div>
+                <div class="right">
+                    <label>Adresse*</label><br>
+                <input type="text" required [(ngModel)]="agent.address" [ngModelOptions]="{standalone: true}">
+                </div>
+                
+                
+            </div>
+            <div class="row">
+                <div class="left">
+                    <label>Email*</label><br>
+                <input type="text" required [(ngModel)]="agent.email" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="right">
+                    <label>Confirmation email*</label><br>
+                    <input type="text" required [(ngModel)]="agent.confirmationEmail" [ngModelOptions]="{standalone: true}">
+                </div>
+                
+               
+            </div>
+            <div class="row">
+                <div class="left">
+                    <label>Numero de telephone*</label><br>
+                <input type="text" required  [(ngModel)]="agent.phone" [ngModelOptions]="{standalone: true}" >
+                </div>
+                <div class="right">
+                    <label>N d'immatriculation au registre de commerce*</label><br>
+                <input type="text" required  [(ngModel)]="agent.n_Immatr" [ngModelOptions]="{standalone: true}" >
+                </div>
+                
+                
+            </div>
+            <div class="patente">
+                <div class="left">
+                    <label>N de patente*</label><br>
+                <input type="text" required [(ngModel)]="agent.n_Pattente" [ngModelOptions]="{standalone: true}"  >
+                </div>
+                <div class="right">
+
+                </div>
+            </div>
+            
+        </form>
+    </div><br><br>
+    <hr class="normal">
+    <div class="bottom">
+        <h1>Pieces jointes</h1>
+        <hr><br>
+        <div class="rowtwo">
+            <div class="col">
+                <label>Fichier</label><br>
+            <div class="fichier">
+                <input type="text"   >
+            </div>
+            </div>
+            <div class="col">
+                <input class="add" type="button" value="+">
+            </div>
+            
+            
+        </div>
+    </div>
+    <div class="confirme">
+        <input type="button" value="Enregistrer" class="ok" (click)="saveAgent()">
+        <input type="button" value="Annuler" class="ok">
+    </div>
+</div>
+

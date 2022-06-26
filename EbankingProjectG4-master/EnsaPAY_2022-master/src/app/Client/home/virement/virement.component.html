@@ -1,0 +1,15 @@
+<form action="">
+  <div class="total">
+    <div class="labels">
+      <label for="fname">Name of the receiver </label><br>
+      <label for="lname">RIB of the receiver </label><br>
+      <label for="lname">Transfered money </label><br>
+    </div>
+    <div class="inputs">
+      <input type="text" id="fname" name="fname" placeholder="First and Last name" ><br>
+      <input type="text" id="lname" name="lname" placeholder="RIB" [(ngModel)]="compte.id" [ngModelOptions]="{standalone: true}" ><br>
+      <input type="text" id="lname" name="lname" placeholder="Add money" [(ngModel)]="compte.balance" [ngModelOptions]="{standalone: true}"><br>
+    </div>
+  </div>
+  <input class="submit" type="submit" value="Submit" (click)="debit()">
+  </form> 

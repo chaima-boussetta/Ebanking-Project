@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="list row">
+    <div class="col-md-8">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search by first Name"
+        />
+      
+
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            (click)="searchFirstname()"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h4>Agents List</h4>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let agent of agents; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setActiveAgent(agent, i)"
+        >
+          {{ agent.firstname }}
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+    <!--<app-details></app-details>-->
+    </div>
+  </div>
+  
+</div>

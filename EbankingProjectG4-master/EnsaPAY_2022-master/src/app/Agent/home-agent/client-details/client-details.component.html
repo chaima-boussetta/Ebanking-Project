@@ -1,0 +1,169 @@
+
+  <div *ngIf="bool; then thenBlock ; else elseBlock" ></div>
+    <div>
+      <ng-template #elseBlock>
+      <h4>Clients</h4>
+      <div>
+        <label><strong>FirstName:</strong></label> {{ currentClient.firstname }}
+      </div>
+      <div>
+        <label><strong>LastName:</strong></label>
+        {{ currentClient.lastname }}
+      </div>
+      <div>
+        <label><strong>Email:</strong></label>
+        {{ currentClient.email }}
+      </div>
+      <div>
+        <label><strong>phone:</strong></label>
+        {{ currentClient.phone }}
+      </div>
+      <div>
+        <label><strong> pieceIdentity:</strong></label>
+        {{ currentClient.pieceIdentity }}
+      </div>
+      <div>
+        <label><strong> N pieceIdentity:</strong></label>
+        {{ currentClient.n_pieceIdentity }}
+      </div>
+      <div>
+        <label><strong>Address:</strong></label>
+        {{ currentClient.address }}
+      </div>
+      <div>
+        <label><strong> Date:</strong></label>
+        {{ currentClient.dateOfBirth }}
+      </div>
+      <div>
+        <label><strong>confirmation Email:</strong></label>
+        {{ currentClient.confirmationEmail }}
+      </div>
+     
+      <button
+        class="badge badge-warning"
+        (click)="getData()"
+      >
+        Edit
+      </button>
+      <br />
+     
+        <p>Please click on a Client...</p>
+     
+     </ng-template>
+     </div>
+
+     <ng-template #thenBlock>
+
+      <div  class="edit-form">
+        <h4>Client</h4>
+        <form>
+          <div class="form-group">
+            <label for="firstname">FirstName</label>
+            <input
+              type="text"
+              class="form-control"
+              id="firstname"
+              [(ngModel)]="currentClient.firstname"
+              name="firstName"
+            />
+            <div class="form-group">
+              <label for="lastname">LastName</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lastName"
+                [(ngModel)]="currentClient.lastname"
+                name="lastName"
+              />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="text"
+              class="form-control"
+              id="email"
+              [(ngModel)]="currentClient.email"
+              name="email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input
+              type="text"
+              class="form-control"
+              id="phone"
+              [(ngModel)]="currentClient.phone"
+              name="phone"
+            />
+          </div>
+          <div class="form-group">
+            <label for="pieceIdentity">pieceIdentity</label>
+            <input
+              type="text"
+              class="form-control"
+              id="pieceIdentity"
+              [(ngModel)]="currentClient.pieceIdentity"
+              name="pieceIdentity"
+            />
+          </div>
+          <div class="form-group">
+            <label for="n_pieceIdentity">n_pieceIdentity</label>
+            <input
+              type="text"
+              class="form-control"
+              id="n_pieceIdentity"
+              [(ngModel)]="currentClient.n_pieceIdentity"
+              name="n_pieceIdentity"
+            />
+          </div>
+          <div class="form-group">
+            <label for="address">address</label>
+            <input
+              type="text"
+              class="form-control"
+              id="address"
+              [(ngModel)]="currentClient.address"
+              name="address"
+            />
+          </div>        
+          <div class="form-group">
+            <label for="address">confirmationEmail</label>
+            <input
+              type="text"
+              class="form-control"
+              id="address"
+              [(ngModel)]="currentClient.confirmationEmail"
+              name="address"
+            />
+          </div>
+          <div class="form-group">
+            <label for="address">date</label>
+            <input
+              type="text"
+              class="form-control"
+              id="address"
+              [(ngModel)]="currentClient.dateOfBirth"
+              name="address"
+            />
+          </div>
+  
+    
+    
+       
+        <button
+          type="submit"
+          class="badge badge-success mb-2"
+          (click)="updateClient()"
+        >
+          Update
+        </button>
+     
+        <p>{{ message }}</p>
+      </div>
+   
+      <div *ngIf="!currentClient.id">
+        <br />
+        <p>Cannot access this Client...</p>
+      </div>
+    
+
